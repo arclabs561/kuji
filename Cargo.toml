@@ -1,0 +1,23 @@
+[package]
+name = "kuji"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Stochastic sampling primitives: Gumbel-max, Reservoir, MCMC"
+repository = "https://github.com/arclabs561/kuji"
+keywords = ["sampling", "gumbel", "reservoir"]
+categories = ["algorithms", "mathematics", "science"]
+
+[dependencies]
+rand = "0.9"
+rand_distr = "0.5"
+
+[dev-dependencies]
+criterion = "0.5"
+proptest = "1.5"
+rand_chacha = "0.9"
+
+[[bench]]
+name = "sampling"
+harness = false
+path = "benches/sampling.rs"

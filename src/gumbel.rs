@@ -9,6 +9,16 @@
 //! This produces a categorical sample with probabilities proportional to
 //! \( \exp(\ell_i) \) (i.e. a softmax distribution) without explicitly
 //! computing softmax.
+//!
+//! ## References
+//!
+//! - Jang, Gu, Poole (2017): *Categorical Reparameterization with Gumbel-Softmax*.
+//! - Maddison, Mnih, Teh (2017): *The Concrete Distribution*.
+//!
+//! Notes:
+//! - This module provides `*_with_rng` variants where determinism matters (tests/benches).
+//! - Functions that call `rand::rng()` internally are convenience wrappers and are not deterministic
+//!   across processes by design.
 
 use rand::prelude::*;
 

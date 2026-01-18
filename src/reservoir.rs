@@ -6,6 +6,15 @@
 //! Instead of generating a random number for every item (Algorithm R),
 //! we compute the number of items to *skip* before the next replacement.
 //! This reduces complexity from O(N) RNG calls to O(k * (1 + log(N/k))).
+//!
+//! ## References
+//!
+//! - Vitter (1985): reservoir sampling “Algorithm R”.
+//! - Li (1994): reservoir sampling “Algorithm L” (skip-based).
+//! - Efraimidis & Spirakis (2006): weighted reservoir sampling (A-Res).
+//!
+//! Notes:
+//! - This module provides `*_with_rng` entrypoints for deterministic testing/benchmarking.
 
 use rand::prelude::*;
 

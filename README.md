@@ -18,6 +18,11 @@ let samples = sampler.samples();
 assert_eq!(samples.len(), 5);
 ```
 
+## Examples
+
+- `cargo run --example weighted_topk`: compare Gumbel-top-k (Plackett–Luce) vs weighted reservoir
+  (A-Res) on the same weight vector.
+
 ## References (what these implementations are trying to be faithful to)
 
 - Vitter (1985): reservoir sampling “Algorithm R”.
